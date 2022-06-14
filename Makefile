@@ -6,13 +6,13 @@
 #	Last Modified: 2014/03/31
 #==========================================
 
-CC=gcc
+#CC=gcc
 CFLAGS=-O -Wall
 
 all: sl
 
 sl: sl.c sl.h
-	$(CC) $(CFLAGS) -o sl sl.c -lncurses
+	$(CC) $(CFLAGS) $(LDFLAGS) -o sl sl.c -lncurses
 
 clean:
 	rm -f sl
